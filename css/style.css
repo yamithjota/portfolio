@@ -89,7 +89,7 @@ section {
   display: flex;
   align-items: center;
   padding: 0 9%;
-  background: url("assets/images/img2.jpg") no-repeat;
+  background: url("/assets/images/img2.jpg") no-repeat;
   background-size: 400px 400px;
   background-position: right;
 }
