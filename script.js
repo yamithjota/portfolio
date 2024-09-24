@@ -95,9 +95,13 @@ function checkInputs() {
 
 
 // Function for check phone
-function isValidPhone(phone) {
-    const isPhoneValid = /^\d+$/.test(phone);
+function isValidPhone() {
+    const phoneNumber = document.getElementById("phone");
+    let phone = phoneNumber.value.trim(); // Limpiar el valor, eliminando espacios en blanco
+
+    const isPhoneValid = /^\d+$/.test(phone); // Validar que solo contenga dígitos
     const errorTxtPhone = document.querySelector(".text-error.phone");
+
     console.log(`phone ingresado: ${phone}, Resultado de validación: ${isPhoneValid}`);
 
     if (!isPhoneValid) {
@@ -111,9 +115,7 @@ function isValidPhone(phone) {
         errorTxtPhone.innerText = "";
         return true;
     }
-
 }
-
 
 //Function for check email
 function isValidEmail(emailAddress) {
